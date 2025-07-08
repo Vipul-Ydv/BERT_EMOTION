@@ -128,19 +128,6 @@ def get_suggestion(emotion):
     return suggestions.get(emotion, 'Thank you for sharing!')
 
 st.markdown(f"""
-<style>
-body, .stApp {{background: {page_bg} !important;}}
-.big-title {{font-size:2.7rem; font-weight:800; color:{accent}; letter-spacing:-1px; margin-bottom:0.2em;}}
-.footer {{text-align:center; color:gray; font-size:0.95rem; margin-top:2em;}}
-.card {{background: {card_grad}; border-radius:16px; padding:1.7em 2em; margin-bottom:1.2em; box-shadow:0 4px 16px rgba(80,80,180,0.07); transition: box-shadow 0.2s; color:{text_color}; border: 1.5px solid {border};}}
-.card:hover {{box-shadow:0 8px 32px rgba(80,80,180,0.13);}}
-.metric {{font-size:1.2rem; font-weight:600; color:{accent};}}
-.emoji {{font-size:2.7rem;}}
-.suggestion {{font-size:1.1rem; color:#0ea5e9; font-weight:500;}}
-hr {{border: none; border-top: 1.5px solid {border}; margin: 1.5em 0;}}
-textarea, .stTextArea textarea, .stTextInput input, .stButton>button {{background-color: {input_bg} !important; color: {input_text} !important;}}
-.stTextArea label, .stTextInput label {{color: {text_color} !important;}}
-</style>
 """, unsafe_allow_html=True)
 st.markdown('<div class="big-title">🎭 BERT Emotion Analyzer</div>', unsafe_allow_html=True)
 
