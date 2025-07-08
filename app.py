@@ -131,7 +131,8 @@ def get_suggestion(emotion):
 # Remove all custom theme and CSS logic
 # (Delete or comment out the st.markdown CSS block and all theme/color variables)
 
-st.markdown('<div class="big-title">🎭 BERT Emotion Analyzer</div>', unsafe_allow_html=True)
+# Main Title
+st.markdown('<h1 style="text-align:center; font-size:3rem; font-weight:800; margin-bottom:0.5em;">🎭 BERT Emotion Analyzer</h1>', unsafe_allow_html=True)
 
 # --- Main Tabs Layout ---
 tabs = st.tabs(["Emotion Analysis", "Dashboard"])
@@ -161,16 +162,15 @@ with tabs[0]:
         }
         st.session_state['session_emotions'].append(entry)
         # --- Results Card ---
-        st.markdown('<div class="card">', unsafe_allow_html=True)
         cols = st.columns([1,2,2])
         emoji_map = {
             'joy': '🟡', 'love': '💖', 'sadness': '💙',
             'anger': '🔴', 'fear': '🟤', 'surprise': '🟠', 'neutral': '⚪️'
         }
         emoji = emoji_map.get(emotion, '❓')
-        cols[0].markdown(f"<div class='emoji'>{emoji}</div>", unsafe_allow_html=True)
-        cols[1].markdown(f"<span class='metric'>Emotion:</span> <span style='font-size:1.5rem'>{emotion.upper()}</span>", unsafe_allow_html=True)
-        cols[2].markdown(f"<span class='suggestion'>Suggestion:<br>{get_suggestion(emotion)}</span>", unsafe_allow_html=True)
+        cols[0].markdown(f"<div style='font-size:4rem; display:flex; align-items:center; justify-content:center; height:100%;'>{emoji}</div>", unsafe_allow_html=True)
+        cols[1].markdown(f"<span style='font-weight:600; color:#6366f1;'>Emotion:</span> <span style='font-size:1.5rem'>{emotion.upper()}</span>", unsafe_allow_html=True)
+        cols[2].markdown(f"<span style='color:#0ea5e9; font-weight:500;'>Suggestion:<br>{get_suggestion(emotion)}</span>", unsafe_allow_html=True)
         st.markdown("<hr>", unsafe_allow_html=True)
         st.markdown("**Confidence**")
         st.progress(confidence)
@@ -260,4 +260,4 @@ with tabs[1]:
     st.markdown('</div>', unsafe_allow_html=True)
 
 # --- Footer ---
-st.markdown('<div class="footer">Made with ❤️!</div>', unsafe_allow_html=True) 
+st.markdown('<div style="text-align:center; color:gray; font-size:0.95rem; margin-top:2em;">Made with ❤️!</div>', unsafe_allow_html=True) 
