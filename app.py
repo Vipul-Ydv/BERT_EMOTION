@@ -169,7 +169,10 @@ st.markdown('<div class="big-title">🎭 BERT Emotion Analyzer</div>', unsafe_al
 tabs = st.tabs(["Emotion Analysis", "Dashboard"])
 
 with tabs[0]:
-    st.write("Enter text below to analyze emotions. Only emotions with ≥10% probability are shown in the breakdown.")
+    if theme == "dark":
+        st.markdown('<span style="color:#e0e7ef;">Enter text below to analyze emotions. Only emotions with ≥10% probability are shown in the breakdown.</span>', unsafe_allow_html=True)
+    else:
+        st.write("Enter text below to analyze emotions. Only emotions with ≥10% probability are shown in the breakdown.")
     with st.form("emotion_form"):
         user_text = st.text_area("Enter your text:", height=100)
         submitted = st.form_submit_button("Analyze Emotion", use_container_width=True)
