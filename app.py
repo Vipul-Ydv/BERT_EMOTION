@@ -260,4 +260,4 @@ with tabs[1]:
     st.markdown('</div>', unsafe_allow_html=True)
 
 # --- Footer ---
-st.markdown('<div style="text-align:center; color:gray; font-size:0.95rem; margin-top:2em;">Made with ❤️!</div>', unsafe_allow_html=True) 
+st.markdown('<div style="text-align:center; color:gray; font-size:0.95rem; margin-top:2em;">Made by VIPUL.</div>', unsafe_allow_html=True) 
