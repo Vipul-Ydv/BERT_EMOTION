@@ -242,7 +242,7 @@ with tabs[1]:
         if session:
             df = pd.DataFrame(session)
             fig, ax = plt.subplots(figsize=(8,2))
-            ax.bar(range(len(df)), df['intensity'], color=st.get_option("theme.primary") or "#6366f1") # Use default theme color
+            ax.bar(range(len(df)), df['intensity'], color="#6366f1")
             ax.set_xticks(range(len(df)))
             ax.set_xticklabels([e['emotion'] for e in session], rotation=45)
             ax.set_ylabel('Intensity')
