@@ -12,8 +12,8 @@ import pandas as pd
 # Load model, tokenizer, and emotion labels
 @st.cache_resource
 def load_model_and_tokenizer():
-    model = BertForSequenceClassification.from_pretrained('bert_emotion_model/')
-    tokenizer = BertTokenizer.from_pretrained('bert_emotion_model/')
+    model = BertForSequenceClassification.from_pretrained('Vipulydvv/BERTEMOTION')
+    tokenizer = BertTokenizer.from_pretrained('Vipulydvv/BERTEMOTION')
     with open('bert_emotion_labels.pkl', 'rb') as f:
         emotion_labels = pickle.load(f)
     model.eval()
