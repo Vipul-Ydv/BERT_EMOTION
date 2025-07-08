@@ -127,27 +127,6 @@ def get_suggestion(emotion):
     }
     return suggestions.get(emotion, 'Thank you for sharing!')
 
-# --- Detect theme and set CSS variables ---
-theme = st.get_option("theme.base") or "light"
-if theme == "dark":
-    page_bg = "#181825"
-    card_bg = "#23272f"
-    card_grad = "linear-gradient(120deg, #23272f 60%, #374151 100%)"
-    text_color = "#e0e7ef"
-    accent = "#6366f1"
-    border = "#374151"
-    input_bg = "#23272f"
-    input_text = "#e0e7ef"
-else:
-    page_bg = "#f8fafc"
-    card_bg = "#f1f5f9"
-    card_grad = "linear-gradient(120deg, #f1f5f9 60%, #e0e7ff 100%)"
-    text_color = "#22223b"
-    accent = "#6366f1"
-    border = "#e0e7ef"
-    input_bg = "#fff"
-    input_text = "#22223b"
-
 st.markdown(f"""
 <style>
 body, .stApp {{background: {page_bg} !important;}}
