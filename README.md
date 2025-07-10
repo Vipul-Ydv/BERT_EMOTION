@@ -63,7 +63,19 @@ python bert_predict.py
 
 ---
 
-## 📁 Project Structure
+## 📁 Screenshots
+
+### Home Page
+
+![Home](photos/Home.png)
+
+### Dashboard Page
+
+![Dashboard](photos/Dashboard.png)
+
+---
+
+## �� Project Structure
 ```
 GOEMOTION_BERT/
 ├── app.py                # Streamlit web app
