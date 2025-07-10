@@ -81,8 +81,6 @@ GOEMOTION_BERT/
 ├── app.py                # Streamlit web app
 ├── bert_predict.py       # CLI emotion analyzer
 ├── bert_emotion_trainer.py # Model training script
-├── bert_emotion_model/   # Trained BERT model directory
-├── bert_emotion_labels.pkl # Pickled emotion labels
 ├── requirements.txt      # Python dependencies
 ├── README.md             # This file
 └── ...                   # Data and other files
